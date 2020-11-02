@@ -1,0 +1,29 @@
+.App {
+  font-family: 'Comfortaa', cursive !important;
+  text-align: center;
+  background: rgb(51,8,103);
+  overflow-x: hidden;
+  background: linear-gradient(45deg, rgba(51,8,103,1) 35%, rgba(50,107,155,1) 100%);
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
