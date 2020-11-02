@@ -10,11 +10,18 @@ import Header from './Header';
 import MainFeaturedPost from './MainFeaturedPost';
 import Sidebar from './Sidebar';
 import Footer from './Footer';
-import StarfieldAnimation from 'react-starfield-animation'
+import StarfieldAnimation from 'react-starfield-animation';
 
 const useStyles = makeStyles((theme) => ({
   mainGrid: {
     marginTop: theme.spacing(3),
+    justifyContent:'center'
+  },
+  screnHeigt:{
+    height: 900,
+    [theme.breakpoints.up('sm')]: {
+    height: 1080,
+    },
   },
   "@global": {
     html: {
@@ -44,7 +51,7 @@ const mainFeaturedPost = {
 
 
 const sidebar = {
-  title: 'About',
+  title: 'About Us',
   description:
     'Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.',
   social: [
@@ -56,16 +63,25 @@ const sidebar = {
 
 export default function Blog() {
   const classes = useStyles();
-
+  
   return (
     <React.Fragment>
 
+      <StarfieldAnimation
+        className={classes.screnHeigt}
+        numParticles = '200'
+        style={{
+          position: 'fixed',
+          width: '100%',
+          backgroundColor: 'rgba(0,0,0,.3)',
+        }}
+      />
       <CssBaseline />
       <Container maxWidth="lg">
-        <Container maxWidth="lg">
+        <Container maxWidth="md">
           <Header title="Blog" sections={sections} />
         </Container>
-        <main>
+        <Container maxWidth="xl">
           <Grid container className={classes.mainGrid}>
           <MainFeaturedPost post={mainFeaturedPost} />
           </Grid>
@@ -77,7 +93,7 @@ export default function Blog() {
               social={sidebar.social}
             />
           </Grid>
-        </main>
+        </Container>
       </Container>
       <Footer title="Footer" description="Something here to give the footer a purpose!" />
     </React.Fragment>

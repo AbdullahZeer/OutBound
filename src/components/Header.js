@@ -33,7 +33,7 @@ export default function Header(props) {
   const { sections } = props;
 
   return (
-    <React.Fragment>
+    <React.Fragment>.
       <Toolbar className={classes.toolbar}>
       <img className={classes.logo} src={logo} alt="Canvas Logo"></img>
       </Toolbar>

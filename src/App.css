@@ -12,7 +12,9 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
+.blurred{
+  backdrop-filter: blur(3px);
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -26,4 +28,27 @@
 
 .App-link {
   color: #61dafb;
+}
+.glow{
+  /* text-shadow: 0 0 3px #fc5858,0 0 3px #fa7171,0 0 3px #fff; */
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 2px #fc5858,0 0 2px #fa7171,0 0 3px #fff;
+  }
+  to {
+    text-shadow: 0 0 0px #fa7171,0 0 0px #fa7171,0 0 2px #fff;
+  }
+}
+@keyframes glow {
+  from {
+    text-shadow: 0 0 2px #fc5858,0 0 2px #fa7171,0 0 3px #fff;
+  }
+  to {
+    text-shadow: 0 0 0px #fa7171,0 0 0px #fa7171,0 0 2px #fff;
+  }
 }

@@ -4,11 +4,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
-import logo from '../imgs/logo.svg'
 
 const useStyles = makeStyles((theme) => ({
   mainFeaturedPost: {
-    marginTop:theme.spacing(13),
+    marginTop:theme.spacing(14),
     marginBottom:theme.spacing(24),
     [theme.breakpoints.up('sm')]: {
       marginTop:theme.spacing(24),
@@ -16,7 +15,9 @@ const useStyles = makeStyles((theme) => ({
     }
   },
   maintext:{
-    justifyContent: 'space-around',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',    
     letterSpacing:'12px',
     [theme.breakpoints.up('sm')]: {
       letterSpacing:'24px',
@@ -30,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
   mainFeaturedPostContent: {
     justifyContent: 'center',
     position: 'relative',
-    padding: theme.spacing(3),
+    padding: theme.spacing(1),
     [theme.breakpoints.up('sm')]: {
       padding: theme.spacing(1),
     },
@@ -40,6 +41,7 @@ const useStyles = makeStyles((theme) => ({
 export default function MainFeaturedPost(props) {
   const classes = useStyles();
   const { post } = props;
+  const slogan = `glow ${classes.maintext}`;
 
   return (
     <Container className={classes.mainFeaturedPost}   >
@@ -51,7 +53,7 @@ export default function MainFeaturedPost(props) {
             <Typography className={classes.maintext} component="h2" variant="h2" color="inherit" gutterBottom>
               {post.title}
             </Typography>
-            <Typography className={classes.maintext} component="h5" variant="h5" color="inherit" gutterBottom>
+            <Typography className={slogan} component="h5" variant="h5" color="inherit" gutterBottom>
               {post.slogan}
             </Typography>
             <Typography subtitle1="h2" color="inherit" paragraph>
