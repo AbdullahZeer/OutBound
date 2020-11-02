@@ -8,7 +8,7 @@ import logo from '../imgs/logo.svg'
 
 const useStyles = makeStyles((theme) => ({
   mainFeaturedPost: {
-    marginTop:theme.spacing(12),
+    marginTop:theme.spacing(14),
     marginBottom:theme.spacing(24),
     [theme.breakpoints.up('sm')]: {
       marginTop:theme.spacing(24),
