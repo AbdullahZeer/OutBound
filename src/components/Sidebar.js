@@ -23,14 +23,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(2),
     marginBottom: theme.spacing(6),
     marginTop: theme.spacing(6),
-    backgroundColor:'rgba(0,0,0,.1)' ,
-  },
-  sidebarLightBox: {
-    minHeight: 400,
-    padding: theme.spacing(2),
-    marginBottom: theme.spacing(6),
-    marginTop: theme.spacing(6),
-    backgroundColor:'rgba(255,255,255,.1)' ,
+    backgroundColor:'rgba(0,0,0,.2)' ,
   },
   sidebarSection: {
     marginTop: theme.spacing(6),
@@ -39,29 +32,43 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Sidebar(props) {
   const classes = useStyles();
-  const { description, social, title } = props;
-  const About = `blurred ${classes.sidebarDarkBox}`;
-  const Services = `blurred ${classes.sidebarLightBox}`;
+  const { description, sections,social, title } = props;
+  const darkBlurr = `blurred ${classes.sidebarDarkBox}`;
+  
   return (
     <Container className={classes.section}>
     <Grid item xs={12} md={12}>
-      <Paper elevation={0} className={About}>
+      {/* <Paper elevation={0} className={darkBlurr}>
         <Typography variant="h5" gutterBottom>
           {title}
         </Typography>
         <Typography>{description}</Typography>
       </Paper>
-      <Paper elevation={0} className={Services}>
+      <Paper elevation={0} className={darkBlurr}>
         <Typography variant="h5" gutterBottom>
           Services
         </Typography>
         <Typography>{description}</Typography>
-      </Paper>
+      </Paper> */}
 
-      <Typography variant="h6" gutterBottom className={classes.sidebarSection}>
+      {/* <Typography variant="h6" gutterBottom className={classes.sidebarSection}>
         Social
-      </Typography>
-      {social.map((network) => (
+      </Typography> */}
+      {
+        sections.map((section)=>(
+            
+          <section id={section.url}>
+            <Paper elevation={0} className={darkBlurr}>
+              <Typography variant="h5" gutterBottom>
+                {section.title}
+              </Typography>
+              <Typography variant='h6' gutterBottom>{description}</Typography>
+            </Paper>
+          </section>
+
+        ))
+      }
+      {/* {social.map((network) => (
         <Link display="block" variant="body1" href="#" key={network}>
           <Grid container direction="row" spacing={1} alignItems="center">
             <Grid item>
@@ -70,7 +77,7 @@ export default function Sidebar(props) {
             <Grid item>{network.name}</Grid>
           </Grid>
         </Link>
-      ))}
+      ))} */}
     </Grid>
     </Container>
   );
@@ -80,5 +87,6 @@ Sidebar.propTypes = {
   archives: PropTypes.array,
   description: PropTypes.string,
   social: PropTypes.array,
+  sections: PropTypes.array,
   title: PropTypes.string,
 };

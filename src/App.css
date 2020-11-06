@@ -1,9 +1,11 @@
+html {
+  scroll-behavior: smooth;
+}
 .App {
   font-family: 'Comfortaa', cursive !important;
   text-align: center;
-  background: rgb(51,8,103);
   overflow-x: hidden;
-  background: linear-gradient(45deg, rgba(51,8,103,1) 35%, rgba(50,107,155,1) 100%);
+  background: linear-gradient(45deg,rgba(31,3,65,1) 0%, rgba(51,8,103,1) 35%, rgba(50,107,155,1) 100%);
 }
 
 
@@ -29,8 +31,8 @@
 .App-link {
   color: #61dafb;
 }
-.glow{
-  /* text-shadow: 0 0 3px #fc5858,0 0 3px #fa7171,0 0 3px #fff; */
+.glow{ 
+  /* text-shadow: 1px 1px 10px #61dafb,0 0 2px #fa7171,0 0 3px #fff; */
   -webkit-animation: glow 1s ease-in-out infinite alternate;
   -moz-animation: glow 1s ease-in-out infinite alternate;
   animation: glow 1s ease-in-out infinite alternate;
@@ -38,7 +40,8 @@
 
 @-webkit-keyframes glow {
   from {
-    text-shadow: 0 0 2px #fc5858,0 0 2px #fa7171,0 0 3px #fff;
+    text-shadow: 1px 1px 10px #61dafb,0 0 2px #fa7171,0 0 3px #fff;
+
   }
   to {
     text-shadow: 0 0 0px #fa7171,0 0 0px #fa7171,0 0 2px #fff;
@@ -46,7 +49,7 @@
 }
 @keyframes glow {
   from {
-    text-shadow: 0 0 2px #fc5858,0 0 2px #fa7171,0 0 3px #fff;
+    text-shadow: 1px 1px 10px #61dafb,0 0 2px #fa7171,0 0 3px #fff;
   }
   to {
     text-shadow: 0 0 0px #fa7171,0 0 0px #fa7171,0 0 2px #fff;

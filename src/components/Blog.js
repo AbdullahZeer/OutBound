@@ -14,7 +14,7 @@ import StarfieldAnimation from 'react-starfield-animation';
 
 const useStyles = makeStyles((theme) => ({
   mainGrid: {
-    marginTop: theme.spacing(3),
+    marginTop: theme.spacing(0),
     justifyContent:'center'
   },
   screnHeigt:{
@@ -22,6 +22,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up('sm')]: {
     height: 1080,
     },
+    [theme.breakpoints.up('xl')]: {
+      height: 1444,
+      },
   },
   "@global": {
     html: {
@@ -34,11 +37,11 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const sections = [
-  { title: 'About Us', url: '#' },
-  { title: 'Sevices', url: '#' },
-  { title: 'Goals', url: '#' },
-  { title: 'Business', url: '#' },
-  { title: 'Contact Us', url: '#' },
+  { title: 'About Us', url: 'Aboutus' },
+  { title: 'Sevices', url: 'Sevices' },
+  { title: 'Team', url: 'Team' },
+  { title: 'Demos', url: 'Demos' },
+  { title: 'Contact Us', url: 'ContactUs' },
 
 ];
 
@@ -73,12 +76,12 @@ export default function Blog() {
         style={{
           position: 'fixed',
           width: '100%',
-          backgroundColor: 'rgba(0,0,0,.3)',
+          backgroundColor: 'rgba(0,0,0,.5)',
         }}
       />
       <CssBaseline />
-      <Container maxWidth="lg">
-        <Container maxWidth="md">
+      <Container maxWidth="xl">
+        <Container>
           <Header title="Blog" sections={sections} />
         </Container>
         <Container maxWidth="xl">
@@ -88,8 +91,8 @@ export default function Blog() {
           <Grid container spacing={5} className={classes.mainGrid}>
             <Sidebar
               title={sidebar.title}
+              sections={sections}
               description={sidebar.description}
-              archives={sidebar.archives}
               social={sidebar.social}
             />
           </Grid>

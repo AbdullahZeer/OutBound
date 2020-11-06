@@ -4,15 +4,23 @@ import { makeStyles } from '@material-ui/core/styles';
 import Toolbar from '@material-ui/core/Toolbar';
 import Link from '@material-ui/core/Link';
 import logo from '../imgs/logo.svg'
+editimport AnchorLink from 'react-anchor-link-smooth-scroll'
 
 const useStyles = makeStyles((theme) => ({
   logo : {
-    maxHeight: '50px',
+    maxHeight: '30px',
     margin: theme.spacing(3),
-    marginLeft: theme.spacing(0)
+    marginBottom: theme.spacing(4),
+    marginLeft: theme.spacing(0),
+    marginRight: theme.spacing(1),
+    [theme.breakpoints.up('sm')]: {
+      marginRight: theme.spacing(0),
+      marginBottom: theme.spacing(5),
+      maxHeight: '50px',
+    },
   },
   toolbar: {
-    borderBottom: `1px solid ${theme.palette.divider}`,
+    // borderBottom: `1px solid ${theme.palette.divider}`,
     paddingLeft: theme.spacing(0),
   },
   toolbarTitle: {
@@ -20,9 +28,10 @@ const useStyles = makeStyles((theme) => ({
   },
   toolbarSecondary: {
     justifyContent: 'space-around',
-    overflowX: 'auto',
   },
   toolbarLink: {
+    color:'#fff',
+    textDecoration:'none',
     padding: theme.spacing(1),
     flexShrink: 0,
   },
@@ -34,21 +43,27 @@ export default function Header(props) {
 
   return (
     <React.Fragment>.
-      <Toolbar className={classes.toolbar}>
-      <img className={classes.logo} src={logo} alt="Canvas Logo"></img>
-      </Toolbar>
+      {/* <Toolbar className={classes.toolbar}>
+      </Toolbar> */}
       <Toolbar component="nav" variant="dense" className={classes.toolbarSecondary}>
+      <img className={classes.logo} src={logo} alt="Canvas Logo"></img>
         {sections.map((section) => (
+          <AnchorLink
+            offset='100'
+            href={`#${section.url}`}
+            className={classes.toolbarLink}
+          >
           <Link
             color="inherit"
             noWrap
             key={section.title}
             variant="body2"
-            href={section.url}
-            className={classes.toolbarLink}
+          
           >
+
             {section.title}
           </Link>
+          </AnchorLink>
         ))}
       </Toolbar>
     </React.Fragment>

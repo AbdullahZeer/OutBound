@@ -14,13 +14,52 @@ const useStyles = makeStyles((theme) => ({
       marginBottom:theme.spacing(28),
     }
   },
-  maintext:{
+  description:{
+    // marginRight: theme.spacing(1),
+    // marginTop: theme.spacing(14),
+    // [theme.breakpoints.up('sm')]: {
+    //   marginTop: theme.spacing(10),
+    //   marginRight: theme.spacing(12),
+    // },
+    marginLeft: theme.spacing(1),
+    marginTop: theme.spacing(5),
+    [theme.breakpoints.up('sm')]: {
+      marginLeft: theme.spacing(34),
+      marginTop: theme.spacing(3),
+
+    }
+  },
+  subSection:{
+
+    textAlign:'left',
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'center',    
+    justifyContent: 'left',    
+  },
+  outbound:{
+    fontWeight:400,
+  },
+  maintextO:{
+    marginLeft: theme.spacing(0),
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'left',    
     letterSpacing:'12px',
     [theme.breakpoints.up('sm')]: {
+      marginLeft: theme.spacing(32),
       letterSpacing:'24px',
+    }
+    },
+  maintextI:{
+    marginLeft: theme.spacing(1),
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'left',    
+    letterSpacing:'12px',
+    [theme.breakpoints.up('sm')]: {
+      marginLeft: theme.spacing(34),
+      letterSpacing:'24px',
+    
     }
   },
   logo:{
@@ -41,8 +80,10 @@ const useStyles = makeStyles((theme) => ({
 export default function MainFeaturedPost(props) {
   const classes = useStyles();
   const { post } = props;
-  const slogan = `glow ${classes.maintext}`;
 
+  const slogan = `glow ${classes.maintextI}`;
+  const title = `${classes.maintextO} ${classes.outbound}`
+  
   return (
     <Container className={classes.mainFeaturedPost}   >
       {/* Increase the priority of the hero background image */}
@@ -50,15 +91,19 @@ export default function MainFeaturedPost(props) {
         <Grid item xs={12} md={12}>
           <div className={classes.mainFeaturedPostContent}>
           {/* <img className={classes.logo} src={logo} alt="Canvas Logo"></img> */}
-            <Typography className={classes.maintext} component="h2" variant="h2" color="inherit" gutterBottom>
+            <Typography className={title}  component="h2" variant="h2" color="inherit" gutterBottom>
               {post.title}
             </Typography>
             <Typography className={slogan} component="h5" variant="h5" color="inherit" gutterBottom>
               {post.slogan}
             </Typography>
-            <Typography subtitle1="h2" color="inherit" paragraph>
+            <container className={classes.subSection}>
+            <Grid item xs={12} md={8}>
+            <Typography className={classes.description} subtitle1="h2" color="inherit" paragraph>
               {post.description}
             </Typography>
+            </Grid>
+            </container>
           </div>
         </Grid>
       </Grid>
