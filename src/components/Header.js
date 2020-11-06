@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Toolbar from '@material-ui/core/Toolbar';
 import Link from '@material-ui/core/Link';
 import logo from '../imgs/logo.svg'
-editimport AnchorLink from 'react-anchor-link-smooth-scroll'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 const useStyles = makeStyles((theme) => ({
   logo : {
