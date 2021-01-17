@@ -24,22 +24,24 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.paper,
     marginTop: theme.spacing(8),
     padding: theme.spacing(2, 0),
+    backgroundColor:'rgba(0,0,0,.6)' ,
+
   },
 }));
 
 export default function Footer(props) {
   const classes = useStyles();
   const { description, title } = props;
-
+  const footerStyle = `blurred ${classes.footer}`;
   return (
-    <footer className={classes.footer}>
+    <footer className={footerStyle}>
       <Container maxWidth="lg">
-        <Typography variant="h6" align="left" gutterBottom>
+        {/* <Typography variant="h6" align="left" gutterBottom>
           {title}
         </Typography>
         <Typography variant="subtitle1" align="left" color="textSecondary" component="p">
           {description}
-        </Typography>
+        </Typography> */}
         <Copyright />
       </Container>
     </footer>

@@ -7,7 +7,14 @@ html {
   overflow-x: hidden;
   background: linear-gradient(45deg,rgba(31,3,65,1) 0%, rgba(51,8,103,1) 35%, rgba(50,107,155,1) 100%);
 }
-
+.makeStyles-background-2 > img {
+width: 100% !important;
+}
+@media only screen and (max-width: 800px){
+  .makeStyles-background-2 > img {
+  height: 90% !important;
+  }
+    }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

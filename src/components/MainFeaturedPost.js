@@ -15,22 +15,22 @@ const useStyles = makeStyles((theme) => ({
     }
   },
   description:{
-    // marginRight: theme.spacing(1),
-    // marginTop: theme.spacing(14),
-    // [theme.breakpoints.up('sm')]: {
-    //   marginTop: theme.spacing(10),
-    //   marginRight: theme.spacing(12),
-    // },
+    marginRight: theme.spacing(1),
+    marginTop: theme.spacing(8),
+    [theme.breakpoints.up('sm')]: {
+      marginTop: theme.spacing(5),
+      marginRight: theme.spacing(12),
+    },
+    fontWeight:100,
     marginLeft: theme.spacing(1),
     marginTop: theme.spacing(5),
     [theme.breakpoints.up('sm')]: {
       marginLeft: theme.spacing(34),
-      marginTop: theme.spacing(3),
+      marginTop: theme.spacing(5),
 
     }
   },
   subSection:{
-
     textAlign:'left',
     display: 'flex',
     alignItems: 'center',
@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
     fontWeight:400,
   },
   maintextO:{
-    marginLeft: theme.spacing(0),
+    marginTop: theme.spacing(6),
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'left',    
@@ -99,7 +99,7 @@ export default function MainFeaturedPost(props) {
             </Typography>
             <container className={classes.subSection}>
             <Grid item xs={12} md={8}>
-            <Typography className={classes.description} subtitle1="h2" color="inherit" paragraph>
+            <Typography className={classes.description} variant="h6" color="inherit" paragraph>
               {post.description}
             </Typography>
             </Grid>

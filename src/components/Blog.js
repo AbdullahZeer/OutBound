@@ -11,11 +11,25 @@ import MainFeaturedPost from './MainFeaturedPost';
 import Sidebar from './Sidebar';
 import Footer from './Footer';
 import StarfieldAnimation from 'react-starfield-animation';
+import background from '../imgs/background.svg'
+import {  Parallax } from 'react-parallax';
 
 const useStyles = makeStyles((theme) => ({
   mainGrid: {
     marginTop: theme.spacing(0),
     justifyContent:'center'
+  },
+  background: {
+    position:'absolute',
+    justifyContent:'center',
+    alignContent:'center',
+
+    // height: 1000,
+    [theme.breakpoints.down('sm')]: {
+      // height: 1000,
+      },
+    // width:'90%',
+    // left:"0"
   },
   screnHeigt:{
     height: 900,
@@ -39,8 +53,7 @@ const useStyles = makeStyles((theme) => ({
 const sections = [
   { title: 'About Us', url: 'Aboutus' },
   { title: 'Sevices', url: 'Sevices' },
-  { title: 'Team', url: 'Team' },
-  { title: 'Demos', url: 'Demos' },
+  { title: 'How Do We Work', url: 'HowDoWeWork' },
   { title: 'Contact Us', url: 'ContactUs' },
 
 ];
@@ -49,7 +62,7 @@ const mainFeaturedPost = {
   title: 'OUTBOUND',
   slogan : 'INTERACTIVE',
   description:
-    "Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.",
+    "Outbound  is a development and consultation studio located in Riyadh Saudi Arabia, striving to create a well crafted games and other immersive interactive experiences.",
 };
 
 
@@ -81,13 +94,17 @@ export default function Blog() {
       />
       <CssBaseline />
       <Container maxWidth="xl">
+
         <Container>
           <Header title="Blog" sections={sections} />
         </Container>
         <Container maxWidth="xl">
-          <Grid container className={classes.mainGrid}>
-          <MainFeaturedPost post={mainFeaturedPost} />
-          </Grid>
+        <Parallax className={classes.background} bgImage={background} strength={150}>
+            <Grid container className={classes.mainGrid}>
+            {/* <img className={classes.background} src={background} alt="Canvas background"></img> */}
+            <MainFeaturedPost post={mainFeaturedPost} />
+            </Grid>
+        </Parallax>
           <Grid container spacing={5} className={classes.mainGrid}>
             <Sidebar
               title={sidebar.title}
