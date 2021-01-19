@@ -5,6 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
+import Sevices from './sections/Sevices';
 
 const useStyles = makeStyles((theme) => ({
   section:{
@@ -19,13 +20,18 @@ const useStyles = makeStyles((theme) => ({
   },
   headers:{
     fontWeight:'bolder',
+    marginTop: theme.spacing(6),
   },
   sidebarDarkBox: {
     minHeight: 400,
-    padding: theme.spacing(6),
-    marginBottom: theme.spacing(6),
-    marginTop: theme.spacing(2),
+    padding: theme.spacing(3),
+    marginBottom: theme.spacing(8),
+    marginTop: theme.spacing(0),
     backgroundColor:'rgba(0,0,0,0)' ,
+    [theme.breakpoints.up('sm')]: {
+      marginBottom: theme.spacing(14),
+      padding: theme.spacing(6),
+    },
   },
   sidebarSection: {
     marginTop: theme.spacing(6),
@@ -44,7 +50,7 @@ export default function Sidebar(props) {
         sections.map((section)=>(
             
           <section id={section.url}>
-              <Typography  className={classes.headers} variant="h5" gutterBottom>
+              <Typography  className={classes.headers} variant="h4" gutterBottom>
                 {section.title}
               </Typography>
             <Paper elevation={0} className={darkBlurr}>
@@ -55,7 +61,7 @@ export default function Sidebar(props) {
                         // code block
                         break;
                       case 'Sevices':
-                        // code block
+                        return <Sevices/>
                         break;
                       case 'HowDoWeWork':
                         // code block

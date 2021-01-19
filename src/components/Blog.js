@@ -79,7 +79,11 @@ const sidebar = {
 
 export default function Blog() {
   const classes = useStyles();
-  
+  var ParallaxNum = 150;
+  if (window.innerWidth<400){
+    ParallaxNum = 400;
+  }
+  console.log(ParallaxNum);
   return (
     <React.Fragment>
 
@@ -99,7 +103,7 @@ export default function Blog() {
           <Header title="Blog" sections={sections} />
         </Container>
         <Container maxWidth="xl">
-        <Parallax className={classes.background} bgImage={background} strength={150}>
+        <Parallax className={classes.background} bgImage={background} strength={ParallaxNum}>
             <Grid container className={classes.mainGrid}>
             {/* <img className={classes.background} src={background} alt="Canvas background"></img> */}
             <MainFeaturedPost post={mainFeaturedPost} />
