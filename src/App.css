@@ -62,3 +62,7 @@ width: 100% !important;
     text-shadow: 0 0 0px #fa7171,0 0 0px #fa7171,0 0 2px #fff;
   }
 }
+.MuiTimelineItem-missingOppositeContent:before {
+  flex: 0 !important;
+  padding: 0 !important;
+}

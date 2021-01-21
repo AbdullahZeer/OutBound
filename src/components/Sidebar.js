@@ -6,6 +6,7 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import Sevices from './sections/Sevices';
+import HowDoWeWork from './sections/HowDoWeWork';
 
 const useStyles = makeStyles((theme) => ({
   section:{
@@ -64,6 +65,7 @@ export default function Sidebar(props) {
                         return <Sevices/>
                         break;
                       case 'HowDoWeWork':
+                        return <HowDoWeWork/>
                         // code block
                         break;
                       case 'ContactUs':
