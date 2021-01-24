@@ -9,8 +9,12 @@ import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles((theme) => ({
+    TimeLine:{
+        paddingLeft: theme.spacing(0),
+        paddingRight: theme.spacing(0)
+    },
     marginDots:{
-        paddingTop:theme.spacing(2),
+        paddingTop:theme.spacing(1),
         paddingBottom:theme.spacing(4),
     },
     Align:{
@@ -40,7 +44,7 @@ export default function HowDoWeWork() {
 
       ];
   return (
-    <Timeline >
+    <Timeline className={classes.TimeLine} >
         {
             works.map((work, index) => (
             <React.Fragment>
@@ -66,10 +70,10 @@ export default function HowDoWeWork() {
                     <TimelineDot />
                     </TimelineSeparator>
                     <TimelineContent className={classes.Align}>
-                    <Typography  variant='h5' fontStyle='bold' gutterBottom>
+                    <Typography  variant='h5'  gutterBottom>
                     {work.title}
                     </Typography>
-                    <Typography className={classes.marginDots} variant='h6' gutterBottom>
+                    <Typography fontWeight='fontWeightLight' className={classes.marginDots}  gutterBottom>
                     {work.desc}
                     </Typography>
 

@@ -26,6 +26,8 @@ const useStyles = makeStyles((theme) => ({
   sidebarDarkBox: {
     minHeight: 400,
     padding: theme.spacing(3),
+    paddingRight: theme.spacing(0),
+    paddingLeft: theme.spacing(0),
     marginBottom: theme.spacing(8),
     marginTop: theme.spacing(0),
     backgroundColor:'rgba(0,0,0,0)' ,

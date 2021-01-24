@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
+import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles((theme) => ({
   mainFeaturedPost: {
@@ -38,6 +39,12 @@ const useStyles = makeStyles((theme) => ({
   },
   outbound:{
     fontWeight:400,
+  },
+  btn:{
+    marginLeft: theme.spacing(1),
+    [theme.breakpoints.up('sm')]: {
+      marginLeft: theme.spacing(34),
+    }
   },
   maintextO:{
     marginTop: theme.spacing(6),
@@ -80,7 +87,7 @@ const useStyles = makeStyles((theme) => ({
 export default function MainFeaturedPost(props) {
   const classes = useStyles();
   const { post } = props;
-
+  const btn = `btnAnimation ${classes.btn}`
   const slogan = `glow ${classes.maintextI}`;
   const title = `${classes.maintextO} ${classes.outbound}`
   
@@ -104,6 +111,11 @@ export default function MainFeaturedPost(props) {
             </Typography>
             </Grid>
             </container>
+            <Grid container direction="column" justify="flex-start" alignItems="flex-start" xs={12} md={12}>
+            <Grid  item xs={12} md={12}>
+            <Button color="white" className={btn} variant="contained" >Work With Us</Button>
+            </Grid>
+            </Grid>
           </div>
         </Grid>
       </Grid>
