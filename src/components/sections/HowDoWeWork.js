@@ -15,7 +15,10 @@ const useStyles = makeStyles((theme) => ({
     },
     marginDots:{
         paddingTop:theme.spacing(1),
-        paddingBottom:theme.spacing(4),
+        paddingBottom:theme.spacing(6),
+        [theme.breakpoints.up('sm')]: {
+            paddingBottom:theme.spacing(12),
+          },
     },
     Align:{
         textAlign:'Left'
@@ -27,19 +30,19 @@ export default function HowDoWeWork() {
     const works = [
         { 
             title: 'Kick-off And Concept (Establish Mission Parameters)',
-            desc: 'Every successful project starts by identifying the goals, team members, budget, timeframe and expected deliverables. We work together to deliver a unique experience by establishing the initial idea, we look at the intended goals and develop some initial concepts that fit within your scope and budget!' 
+            desc: 'We identify the goals, budget and expected deliverables then we work together to deliver a unique experience by establishing the initial idea' 
         },
         { 
             title: 'Pre-Production (last checks until T-0)', 
-            desc: 'This phase is intended to define the design of the experience we are creating, here we try to minimize any changes that might happen in the production phase, to arrive at the desired experience as quickly as possible.' 
+            desc: 'In this phase we focus on the design of the experience and try to minimize any changes in the production phase' 
         },
         { 
             title: 'Production (launching the development rocket until reaching intended orbit)', 
-            desc: 'Here we implement and iterate on the design, we have a smaller production/pre-production for each part of the experience, followed by rounds of iterations. While its best to have no design changes during production, they usually happen, that should not be a concern, as we will communicate with you in every step.' 
+            desc: 'The phase where we start implement and iterate on the design' 
         },
         { 
             title: 'Polish / QA (deploying the project in space right next to ISS)', 
-            desc: 'Here we check what additional tweaks and adjustments should be added, to improve the overall experience quality and usability, generally no major changes happen here at this point, the deliverable is the near-final experience with some final passes at bug-fixes and optimization, the experience should be flawless.' 
+            desc: 'Here we make some adjustments, fixes to improve the overall experience' 
         },
 
       ];

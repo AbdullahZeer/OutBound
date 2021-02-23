@@ -113,7 +113,7 @@ export default function MainFeaturedPost(props) {
             </container>
             <Grid container direction="column" justify="flex-start" alignItems="flex-start" xs={12} md={12}>
             <Grid  item xs={12} md={12}>
-            <Button color="white" className={btn} variant="contained" >Work With Us</Button>
+            <Button color="white" href='#ContactUs' className={btn} variant="contained" >Work With Us</Button>
             </Grid>
             </Grid>
           </div>

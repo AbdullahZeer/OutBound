@@ -7,6 +7,7 @@ import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import Sevices from './sections/Sevices';
 import HowDoWeWork from './sections/HowDoWeWork';
+import Contactus from './sections/Contactus';
 
 const useStyles = makeStyles((theme) => ({
   section:{
@@ -71,6 +72,7 @@ export default function Sidebar(props) {
                         // code block
                         break;
                       case 'ContactUs':
+                        return <Contactus/>
                         // code block
                         break;
                       default:

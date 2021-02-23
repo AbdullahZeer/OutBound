@@ -62,7 +62,7 @@ const mainFeaturedPost = {
   title: 'OUTBOUND',
   slogan : 'INTERACTIVE',
   description:
-    "Outbound  is a development and consultation studio located in Riyadh Saudi Arabia, striving to create a well crafted games and other immersive interactive experiences.",
+    "Outbound  is a game development and consultation studio located in Riyadh Saudi Arabia, striving to create well crafted games and immersive experiences",
 };
 
 
