@@ -52,7 +52,7 @@ export default function HowDoWeWork() {
             works.map((work, index) => (
             <React.Fragment>
 
-                { index != works.length-1 ?
+                { index !== works.length-1 ?
                 <TimelineItem>
                     <TimelineSeparator>
                     <TimelineDot />

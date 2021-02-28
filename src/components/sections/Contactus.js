@@ -1,8 +1,5 @@
 import React from 'react';
 import { createStyles, Theme, makeStyles } from '@material-ui/core/styles';
-import Input from '@material-ui/core/Input';
-import InputLabel from '@material-ui/core/InputLabel';
-import InputAdornment from '@material-ui/core/InputAdornment';
 import FormControl from '@material-ui/core/FormControl';
 import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
@@ -10,7 +7,6 @@ import PermIdentity from '@material-ui/icons/PermIdentityRounded';
 import Phone from '@material-ui/icons/PhoneIphoneRounded';
 import Email from '@material-ui/icons/EmailRounded';
 import Company from '@material-ui/icons/LaptopRounded';
-import OutlinedInput from '@material-ui/core/OutlinedInput';
 import Button from '@material-ui/core/Button';
 import emailjs from 'emailjs-com';
 
@@ -61,6 +57,9 @@ export default function InputWithIcon() {
       company: '',
       project: ''
   };
+  const clearValues = () => {
+    setValues({ ...reset });
+  };
 
   function sendEmail(e) {
     e.preventDefault();
@@ -71,7 +70,7 @@ export default function InputWithIcon() {
       }, (error) => {
           console.log(error.text);
       });
-
+      clearValues()
   }
   return (
       <div>

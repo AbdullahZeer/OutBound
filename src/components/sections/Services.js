@@ -1,8 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 import Ar from '../../imgs/AR.svg'
 import Game from '../../imgs/Game.svg'
@@ -62,7 +60,7 @@ export default function Header(props) {
     sevices.map((sevice , index)=>(
       <React.Fragment>
         <Grid xs={12} md={6}   className={classes.RowContainerLeft}>
-          <img className={classes.image} src={sevice.imge}></img>
+          <img className={classes.image} alt="service" src={sevice.imge}></img>
           <Grid className={classes.alignContent} item xs={12} md={12}>
           <Typography variant='h5' gutterBottom>{sevice.title}</Typography>
           </Grid>

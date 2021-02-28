@@ -5,7 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
-import Sevices from './sections/Sevices';
+import Services from './sections/Services';
 import HowDoWeWork from './sections/HowDoWeWork';
 import Contactus from './sections/Contactus';
 
@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Sidebar(props) {
   const classes = useStyles();
-  const { description, sections,social, title } = props;
+  const { sections,social } = props;
   const darkBlurr = `blurred ${classes.sidebarDarkBox}`;
   
   return (
@@ -60,23 +60,16 @@ export default function Sidebar(props) {
             <Paper elevation={0} className={darkBlurr}>
                 {(() => {
                     switch(section.url) {
-                      case 'Aboutus':
-                        return <Typography variant='h6' gutterBottom>{description}</Typography>
-                        // code block
-                        break;
-                      case 'Sevices':
-                        return <Sevices/>
+                      case 'Services':
+                        return <Services/>
                         break;
                       case 'HowDoWeWork':
                         return <HowDoWeWork/>
-                        // code block
                         break;
                       case 'ContactUs':
                         return <Contactus/>
-                        // code block
                         break;
                       default:
-                        // code block
                   }
                 })()}
             </Paper>

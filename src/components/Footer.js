@@ -21,7 +21,7 @@ function Copyright() {
 const useStyles = makeStyles((theme) => ({
   footer: {
     // position: 'relative',
-    backgroundColor: theme.palette.background.paper,
+    // backgroundColor: theme.palette.background.paper,
     marginTop: theme.spacing(8),
     padding: theme.spacing(2, 0),
     backgroundColor:'rgba(0,0,0,.6)' ,
@@ -31,7 +31,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Footer(props) {
   const classes = useStyles();
-  const { description, title } = props;
   const footerStyle = `blurred ${classes.footer}`;
   return (
     <footer className={footerStyle}>

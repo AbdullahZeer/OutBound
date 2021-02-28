@@ -51,8 +51,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const sections = [
-  { title: 'About Us', url: 'Aboutus' },
-  { title: 'Sevices', url: 'Sevices' },
+  { title: 'Services', url: 'Services' },
   { title: 'How Do We Work', url: 'HowDoWeWork' },
   { title: 'Contact Us', url: 'ContactUs' },
 
@@ -67,9 +66,6 @@ const mainFeaturedPost = {
 
 
 const sidebar = {
-  title: 'About Us',
-  description:
-    'Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.',
   social: [
     { name: 'GitHub', icon: GitHubIcon },
     { name: 'Twitter', icon: TwitterIcon },

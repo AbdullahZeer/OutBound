@@ -28,6 +28,9 @@ const useStyles = makeStyles((theme) => ({
   },
   toolbarSecondary: {
     justifyContent: 'space-around',
+    [theme.breakpoints.up('sm')]: {
+      width: '77%',
+    },
   },
   toolbarLink: {
     color:'#fff',
