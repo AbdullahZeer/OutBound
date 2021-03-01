@@ -29,19 +29,19 @@ export default function HowDoWeWork() {
     const classes = useStyles();
     const works = [
         { 
-            title: 'Kick-off And Concept (Establish Mission Parameters)',
+            title: 'Kick-off And Concept ',
             desc: 'We identify the goals, budget and expected deliverables then we work together to deliver a unique experience by establishing the initial idea' 
         },
         { 
-            title: 'Pre-Production (last checks until T-0)', 
+            title: 'Pre-Production', 
             desc: 'In this phase we focus on the design of the experience and try to minimize any changes in the production phase' 
         },
         { 
-            title: 'Production (launching the development rocket until reaching intended orbit)', 
+            title: 'Production ', 
             desc: 'The phase where we start implement and iterate on the design' 
         },
         { 
-            title: 'Polish / QA (deploying the project in space right next to ISS)', 
+            title: 'Polish / QA ', 
             desc: 'Here we make some adjustments, fixes to improve the overall experience' 
         },
 

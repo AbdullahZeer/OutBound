@@ -71,9 +71,9 @@ width: 100% !important;
   background: linear-gradient(270deg, #00c6e6, #ff0085);
   background-size: 400% 400%;
   color:#fff !important;
-  -webkit-animation: AnimationName 2s ease infinite;
-  -moz-animation: AnimationName 2s ease infinite;
-  animation: AnimationName 2s ease infinite;
+  -webkit-animation: AnimationName 4s ease infinite;
+  -moz-animation: AnimationName 4s ease infinite;
+  animation: AnimationName 4s ease infinite;
 }
 
 @-webkit-keyframes AnimationName {
@@ -93,4 +93,40 @@ width: 100% !important;
 }
 .MuiFormControl-root .MuiTextField-root{
   width: 100%;
+}
+.MuiTimelineConnector-root{
+  background-color:rgba(255,255,255,0.50) !important
+  
+}
+.MuiTimelineDot-defaultGrey {
+  background-color: rgba(255,255,255,1) !important;
+  -webkit-animation: glowd 1s ease-in-out infinite alternate !important;
+  -moz-animation: glowd 1s ease-in-out infinite alternate !important;
+  animation: glowd 1s ease-in-out infinite alternate !important;
+}
+
+@-webkit-keyframes glowd {
+  from {
+    box-shadow: 1px 1px 10px #61dafb,0 0 2px #fa7171,0 0 2px #fff !important;
+
+  }
+  to {
+    box-shadow: 0 0 0px #fa7171,0 0 0px #fa7171,0 0 1px #fff !important;
+  }
+}
+@keyframes glowd  {
+  from {
+    box-shadow: 1px 1px 10px #61dafb,0 0 2px #fa7171,0 0 2px #fff !important;
+  }
+  to {
+    box-shadow: 0 0 0px #fa7171,0 0 0px #fa7171,0 0 1px #fff !important;
+  }
+}
+@-moz-keyframes glowd  {
+  from {
+    box-shadow: 1px 1px 10px #61dafb,0 0 2px #fa7171,0 0 2px #fff !important;
+  }
+  to {
+    box-shadow: 0 0 0px #fa7171,0 0 0px #fa7171,0 0 1px #fff !important;
+  }
 }
