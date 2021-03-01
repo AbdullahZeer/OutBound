@@ -44,7 +44,8 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Sidebar(props) {
   const classes = useStyles();
-  const { sections,social } = props;
+  const { sections} = props;
+  // const { social } = props;
   const darkBlurr = `blurred ${classes.sidebarDarkBox}`;
   
   return (
@@ -62,13 +63,10 @@ export default function Sidebar(props) {
                     switch(section.url) {
                       case 'Services':
                         return <Services/>
-                        break;
                       case 'HowDoWeWork':
                         return <HowDoWeWork/>
-                        break;
                       case 'ContactUs':
                         return <Contactus/>
-                        break;
                       default:
                   }
                 })()}
