@@ -5,6 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 const useStyles = makeStyles((theme) => ({
   mainFeaturedPost: {
@@ -81,6 +82,9 @@ const useStyles = makeStyles((theme) => ({
       padding: theme.spacing(1),
     },
   },
+  toolbarLink: {
+    textDecoration:'none',
+  },
 }));
 
 export default function MainFeaturedPost(props) {
@@ -112,7 +116,12 @@ export default function MainFeaturedPost(props) {
             </container>
             <Grid container direction="column" justify="flex-start" alignItems="flex-start" xs={12} md={12}>
             <Grid  item xs={12} md={12}>
-            <Button color="white" href='#ContactUs' className={btn} variant="contained" >Work With Us</Button>
+            <AnchorLink
+            offset='100'
+            href="#ContactUs"
+            className={classes.toolbarLink}>
+            <Button color="white" className={btn} variant="contained" >Work With Us</Button>
+            </AnchorLink>
             </Grid>
             </Grid>
           </div>

@@ -49,7 +49,11 @@ export default function InputWithIcon() {
     setValues({ ...values, [prop]: event.target.value });
     console.log(templateParams);
   };
-
+  const data = {
+    userid: 'user_d7hwHiS6HgfKzJBdrgInH',
+    template: 'template_rhhoblo' ,
+    service: 'service_soo1vaq',
+  }
   const reset ={
       name:"",
       email: "",
@@ -64,7 +68,7 @@ export default function InputWithIcon() {
   function sendEmail(e) {
     e.preventDefault();
 
-    emailjs.send('service_6xhul75', 'template_in0v5em', templateParams, 'user_sA9GOiE8RfZrHVHKhWdah')
+    emailjs.send(data.template, data.service, templateParams, data.userid)
       .then((result) => {
           console.log(result.text);
       }, (error) => {
