@@ -30,6 +30,7 @@ function App() {
   });
   return (
     <div className="App">
+      <title>Outbound</title>
       <ThemeProvider theme={darkTheme}>
         <Blog/>
         </ThemeProvider>

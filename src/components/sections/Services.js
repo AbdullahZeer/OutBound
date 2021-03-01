@@ -50,9 +50,9 @@ const useStyles = makeStyles((theme) => ({
 export default function Header(props) {
   const classes = useStyles();
   const sevices = [
-    { title: 'Games', desc: 'Interact through space and time', imge:Game },  
     { title: 'AR', desc: 'Expand your reality', imge:Ar },
     { title: 'VR', desc: 'Warp to other universes', imge:Vr},
+    { title: 'Games', desc: 'Interact through space and time', imge:Game },  
   ];
   return (
     <Grid   container  justify="center" alignItems="center" className={classes.alignContainer} xs={12} md={12}>
