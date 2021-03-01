@@ -79,7 +79,7 @@ export default function Blog() {
   if (window.innerWidth<400){
     ParallaxNum = 400;
   }
-  console.log(ParallaxNum);
+  // console.log(ParallaxNum);
   return (
     <React.Fragment>
 

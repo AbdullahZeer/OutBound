@@ -47,7 +47,7 @@ export default function InputWithIcon() {
 
   const handleChange = (prop) => (event) => {
     setValues({ ...values, [prop]: event.target.value });
-    console.log(templateParams);
+    // console.log(templateParams);
   };
   const data = {
     userid: 'user_d7hwHiS6HgfKzJBdrgInH',
@@ -68,7 +68,7 @@ export default function InputWithIcon() {
   function sendEmail(e) {
     e.preventDefault();
 
-    emailjs.send(data.template, data.service, templateParams, data.userid)
+    emailjs.send(data.service , data.template, templateParams, data.userid)
       .then((result) => {
           console.log(result.text);
       }, (error) => {
