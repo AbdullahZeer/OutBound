@@ -16,6 +16,9 @@ const useStyles = makeStyles((theme: Theme) =>
         display: 'flex',
         flexWrap: 'wrap',
       },
+    item: {
+      marginTop: theme.spacing(2),
+    },
     container:{
         marginTop:theme.spacing(6)
       },
@@ -80,7 +83,7 @@ export default function InputWithIcon() {
       <div>
       <form onSubmit={sendEmail} >
       <Grid container justify="center" alignItems="center" >
-        <Grid container xs={6} md={3}  spacing={1} justify="center" alignItems="flex-end">
+        <Grid className={classes.item} container xs={6} md={3}  spacing={1} justify="center" alignItems="flex-end">
           <Grid item>
             <PermIdentity/>
           </Grid>
@@ -92,7 +95,7 @@ export default function InputWithIcon() {
             label="Name" />
           </Grid>
         </Grid>
-        <Grid container xs={6} md={3}  spacing={1} justify="center" alignItems="flex-end">
+        <Grid className={classes.item} container xs={6} md={3}  spacing={1} justify="center" alignItems="flex-end">
           <Grid item>
             <Email />
           </Grid>
@@ -104,7 +107,7 @@ export default function InputWithIcon() {
             label="Email" />
           </Grid>
         </Grid>
-        <Grid container xs={6} md={3}  spacing={1} justify="center" alignItems="flex-end">
+        <Grid className={classes.item} container xs={6} md={3}  spacing={1} justify="center" alignItems="flex-end">
           <Grid item>
             <Phone />
           </Grid>
@@ -116,7 +119,7 @@ export default function InputWithIcon() {
             label="Phone(Optional)" />
           </Grid>
         </Grid>
-        <Grid container xs={6} md={3}  spacing={1} justify="center" alignItems="flex-end">
+        <Grid className={classes.item} container xs={6} md={3}  spacing={1} justify="center" alignItems="flex-end">
           <Grid item>
             <Company />
           </Grid>
