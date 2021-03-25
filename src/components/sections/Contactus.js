@@ -79,7 +79,7 @@ export default function InputWithIcon() {
   return (
       <div>
       <form onSubmit={sendEmail} >
-      <Grid container justify="center" alignItems="center"  className={classes.margin}>
+      <Grid container justify="center" alignItems="center" >
         <Grid container xs={6} md={3}  spacing={1} justify="center" alignItems="flex-end">
           <Grid item>
             <PermIdentity/>
